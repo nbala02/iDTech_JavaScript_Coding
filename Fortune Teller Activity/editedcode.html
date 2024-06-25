@@ -1,0 +1,93 @@
+<div class="lesson-banner"><img src="https://student.idtech.com/courses/180/files/67625/preview" alt="Lesson Banner" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/67625" data-api-returntype="File" /></div>
+<h2 class="chunk-header">GitHub Install</h2>
+<p class="text-format"><span>If you haven't already, create an account on </span><a href="https://github.com/"><span>github.com</span></a><span>. Follow along with this video to download </span><a href="https://git-scm.com/"><span>git</span></a>, if you haven't yet,<span>&nbsp;and set it up on your local machine using the ssh keys. You can also</span><a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"><span> review the documentation</span></a><span> on how to set up ssh keys on your GitHub account. </span></p>
+<div style="margin: 25px 30px; padding: 15px 25px; background-color: #f7f7f7; border: 2px solid #dddddd;">
+    <h2><strong><span style="color: var(--ic-brand-primary); font-size: 16pt;"><i class="icon-Solid icon-warning" style="margin-left: 0.55em; margin-right: 0.35em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Mac Users:</span></strong></h2>
+    <hr style="margin: 5px;" />
+    <p>If you're on a Mac computer, your instructions may differ a bit from the video below. While watching the video, you can follow along with the written steps below the video.</p>
+</div>
+
+<div style="margin: 25px 30px; padding: 15px 25px; background-color: #f7f7f7; border: 2px solid #dddddd;">
+    <h2><strong><span style="color: var(--ic-brand-primary); font-size: 16pt;"><i class="icon-Solid icon-warning" style="margin-left: 0.55em; margin-right: 0.35em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Windows Users:</span></strong></h2>
+    <hr style="margin: 5px;" />
+    <p>If you're on a Windows computer, your instructions may differ a bit from the video below. Once you reach <strong>2:53</strong> in the video, you can follow along with the written steps in the "ssh Keys on Windows" chunk.</p>
+</div>
+
+<p class="text-format"><iframe src="https://drive.google.com/file/d/1t1QZx1UNEt09N05Z3PCPM-hH8LOTGYDa/preview" width="640" height="480" allow="autoplay"></iframe></p>
+
+
+<h2 class="chunk-header">ssh Keys on Mac</h2>
+<ol class="step-number" style="height: auto;">
+    <li style="height: auto;">At timestamp 1:48, you'll be lead to this page, to install git open up Terminal.</li>
+    <li style="height: auto;">In Terminal, run the following command to install git on your Mac.
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>$ brew install git</strong></li>
+        </ul>
+        <div style="margin: 35px 40px 40px; border: 1px solid #dcdcdc;">
+            <details style="border: 1px solid #dcdcdc;">
+                <summary style="padding: 1em 1.5em; background: #f5f5f5;"><span style="margin-left: 0.75em;"><strong>⚡️ Homebrew Error Message</strong></span></summary>
+                <div style="margin: 1.618em 1.5em;">
+                    <p>If you run into an error or don't have homebrew installed on your computer, paste the following line of code in Terminal and press enter:</p>
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</strong></li>
+        </ul>
+        <p>You'll need to enter your computer's password and press the return key to begin the installation process.</p>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/87527/preview" alt="1_cdssh.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/87527" data-api-returntype="File" /></p>
+                </div>
+            </details>	
+        </div>
+        
+    </li>
+    <li style="height: auto;">At timestamp 2:32, access the .ssh directory by typing:
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>cd .ssh</strong></li>
+        </ul>
+    </li>
+    <li style="height: auto;">At timestamp 3:23, instead of entering a file path for the key, keep the default location and press enter.</li>
+    <li style="height: auto;">Press enter for the next 3 prompts about the location and passphrase.
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/87525/preview" alt="1_cdssh.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/87525" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">At timestamp 3:58, you'll list the data from the default id_ed25519 file instead of the test1 file.
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/87526/preview" alt="1_cdssh.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/87526" data-api-returntype="File" /></p>
+    </li>
+</ol>
+
+<h2 class="chunk-header">ssh Keys on Windows</h2>
+<p class="text-format">As you may have noticed <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"><span>in the documentation</span></a>, the steps to generate your ssh keys will differ if you're on Windows. These steps can all be done in the Git Bash terminal.</p>
+<ol class="step-number" style="height: auto;">
+    <li style="height: auto;">Open <strong>Git Bash</strong> and type the following command to enter the .ssh folder on your computer:
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>cd .ssh</strong></li>
+        </ul>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/27586/preview" alt="1_cdssh.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/27586" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">Type the following command to generate a key for your GitHub email address (where you'll replace "YourName@YourEmail.com" with your GitHub login email address):
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>ssh-keygen -t ed25519 -C "YourName@YourEmail.com"</strong></li>
+        </ul>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/28343/preview" alt="2_keygen.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/28343" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">Press enter for the next 3 prompts about the location and passphrase.
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/28480/preview" alt="3_Enter.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/28480" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">To make sure the Git Agent is running, type:
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>eval "$(ssh-agent -s)"</strong></li>
+        </ul>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/27904/preview" alt="4_Agent.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/27904" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">To add the key to the Git Agent, type:
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>ssh-add</strong></li>
+        </ul>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/28376/preview" alt="5_Addssh.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/28376" data-api-returntype="File" /></p>
+    </li>
+    <li style="height: auto;">Copy the ssh key to your clip board by typing:
+        <ul class="bulletpoint" style="height: auto;">
+            <li style="height: auto;"><span style="background-color: #ced4d9; color: #000000;"><strong>clip &lt; ~/.ssh/id_ed25519.pub</strong></li>
+        </ul>
+        <p style="margin-left: 3.5rem; width: calc(100%-3.5rem);"><img src="https://student.idtech.com/courses/180/files/27724/preview" alt="6_Clip.png" data-api-endpoint="https://student.idtech.com/api/v1/courses/180/files/27724" data-api-returntype="File" /></p>
+        <p class="text-format">If it doesn't properly copy to your clipboard for some reason, you can also go to the &ldquo;C:\Users\&rdquo;UsernameHere&rdquo;\.ssh&rdquo; folder on your computer and open the &ldquo;id_ed25519.pub&rdquo; file in VS Code.</p>
+    </li>
+    <li style="height: auto;">Scroll back up to the video and continue watching at 6:32 to add the copied key to your GitHub account.</li>
+</ol>
